@@ -14,7 +14,7 @@ jobs:
       - name: Get templates from another repository
         uses: actions/checkout@v4
         with:
-          repository: skills/exercise-toolkit
+          repository: dev-pods/exercise-toolkit
           path: exercise-toolkit
 
       - name: Show available templates
@@ -22,7 +22,7 @@ jobs:
 
       - name: Build comment using template
         id: build-comment
-        uses: skills/action-text-variables@v1
+        uses: dev-pods/action-text-variables@v0.0.1
         with:
           template-file: exercise-toolkit/markdown-templates/step-feedback/lesson-finished.md
           template-vars: >
